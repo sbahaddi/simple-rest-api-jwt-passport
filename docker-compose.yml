@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  app-jwt:
+    build: .
+    image: app-jwt
+    container_name: app-jwt-dev
+    ports:
+      - "5000:5000"
+    command: npm run dev
+    volumes:
+      - .:/app/
+      - /app/node_modules
